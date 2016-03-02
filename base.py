@@ -96,3 +96,18 @@ def log4(text):
   return decorator
 
 # callable to judge a var is callable
+
+#########
+int2 = functools.partial(int, base = 5)
+
+######
+# *args is a tuple, **kv is a dictionary
+def foo(*args, **kw):
+  print 'args =', args
+  print 'kw =', kw
+
+foo(1, 2, 3, 4)
+foo(a = 1, b = 2, c = 3)
+foo(1, 2, 3, 4, a = 1, b = 2, c = 3)
+
+
