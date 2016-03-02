@@ -1,3 +1,5 @@
+import functools
+
 def calc_sum(*args):
   sum = 0
   for n in args:
@@ -59,3 +61,38 @@ def now():
 
 
 print now()
+
+def log2(text):
+  def decorator(func):
+    def wrapper(*args, **kw):
+      print '%s %s()' %(text, func.__name__)
+      return func(*args, **kw)
+    return wrapper
+  return decorator
+
+@log2("execute") #the same as now2 = log("execute")(now2)
+def now2():
+  print '2016-3-2'
+
+now2()
+
+###############################################
+# use functools
+###############################################
+def log3(func):
+  @functools.wraps(func)
+  def wrapper(*args, **kw):
+    print 'call %s():' % func.__name__
+    return func(*argc, **kw)
+  return wrapper
+
+def log4(text):
+  def decorator(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kw):
+      print '%s %s():' %(text, func.__name__)
+      return func(*args, **kw)
+    return wrapper
+  return decorator
+
+# callable to judge a var is callable
