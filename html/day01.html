@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf8' />
+  <title></title>
+</head>
+<body bgcolor="#FFF5EE">
+<p align="center" name= "title">Hello world!</p>
+<hr />
+<pre>
+  这个是有格式的文本
+  所以请注意，很适合显示计算机代码
+</pre>
+
+<del>二十</del><br />
+<ins>十二</ins><br />
+<!-- target表示这个链接的网页在哪显示 -->
+<a href="http://www.baidu.com" target="_blank">百度</a><br />
+<a href="http://www.baidu.com"><img src="1.jpg" border="0"></a><br />
+<a href="#title">链接到标题</a>
+<hr />
+<!-- frameset不要放在body中，单独用 -->
+<table border="0">
+<caption>我的成绩</caption>
+  <tr>
+    <td>100</td>
+    <td>200</td>
+    <td>300</td>
+  </tr>
+</table>
+<!-- 在td和th标签，还可以设置 align -->
+<table border="1" cellpadding="10" cellspacing="10" bgcolor="yellow">
+  <caption>信息</caption>
+  <tr>
+    <th>姓名</th>
+    <th colspan="2">电话</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>555 77 854</td>
+    <td>555 77 855</td>
+  </tr>
+</table>
+
+<!-- 列表 -->
+<!-- ul的type属性有disc,circle,square等 -->
+<ul>
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ul>
+
+<!-- ol的type属性可以设置字母"A","a","I","i" -->
+<ol start="50">
+  <li>牛奶</li>
+  <li>茶</li>
+  <li>咖啡</li>
+</ol>
+
+<!-- 表单与输入 -->
+<form action="/example/html/form_action" method="post">
+  名：<input type="text" name="firstname">
+  密码：<input type="password" name="password">
+  <input type="submit" value="Submit" />
+</form>
+
+<form>
+自行车：
+  <input type="checkbox" name="vehicle" value="bike">
+汽车：
+  <input type="checkbox" name="vechile" value="Car">
+  <input type="submit" value="submit">
+</form>
+
+<form>
+  男性：<input type="radio" checked="checked" name="Sex" value="male">
+  女性：<input type="radio" name="Sex" value="female">
+</form>
+
+<select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select><br />
+
+<textarea cols="30" rows="5"></textarea>
+
+<img src="agda.jpg" width="128" height="128">
+</body>
+<frameset cols="25%,50%,25%">
+  <frame src="http://www.baidu.com">
+  <frame src="http://www.qq.com">
+  <frame src="http://www.fuckqq.com">
+</frameset>
+<frameset rows="25%,50%,25%">
+  <!-- 不可更改大小，noresize,可以将数字换成50%换成*，代表由浏览器计算 -->
+  <frame src="#" noresize="noresize"></frame>
+</frameset>
+</html>
